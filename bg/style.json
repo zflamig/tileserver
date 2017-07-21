@@ -1,0 +1,97 @@
+{
+  "version": 8,
+  "name": "BG",
+  "center": [
+    8.542,
+    47.372
+  ],
+  "zoom": 11.6,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "openmaptiles": {
+      "type": "vector",
+      "url": "mbtiles://{v3}"
+    }
+  },
+  "sprite": "{styleJsonFolder}/sprite",
+  "glyphs": "{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "rgba(29, 29, 28, 1)"
+      }
+    },
+    {
+      "id": "park",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849388993.3071"
+      },
+      "source": "openmaptiles",
+      "source-layer": "park",
+      "minzoom": 0,
+      "filter": [
+        "==",
+        "$type",
+        "Polygon"
+      ],
+      "paint": {
+        "fill-color": "rgba(34, 60, 9, 1)"
+      }
+    },
+    {
+      "id": "water",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849382550.77"
+      },
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "minzoom": 0,
+      "paint": {
+        "fill-color": "rgba(1, 9, 27, 1)"
+      }
+    },
+    {
+      "id": "water-pattern",
+      "type": "fill",
+      "metadata": {
+        "mapbox:group": "1444849382550.77"
+      },
+      "source": "openmaptiles",
+      "source-layer": "water",
+      "minzoom": 0,
+      "paint": {
+        "fill-translate": [
+          0,
+          2.5
+        ],
+        "fill-pattern": "wave",
+        "fill-color": "rgba(255, 255, 255, 1)"
+      }
+    },
+    {
+      "id": "aerodrome",
+      "type": "fill",
+      "source": "openmaptiles",
+      "source-layer": "aeroway",
+      "minzoom": 4,
+      "filter": [
+        "all",
+        [
+          "==",
+          "class",
+          "aerodrome"
+        ]
+      ],
+      "paint": {
+        "fill-outline-color": "rgba(0, 0, 0, 1)",
+        "fill-color": "rgba(29, 17, 37, 1)"
+      }
+    }
+  ],
+  "id": "ciw6czz2n00242kmg6hw20box"
+}
